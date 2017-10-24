@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style/test.css">
+</head>
+<body>
+	<div class="main" >
+		<ul class="img-container">
+			<li class="img"><img src="image/1.jpg" alt="1"></li>
+			<li class="img"><img src="image/2.jpg" alt="2"></li>
+			<li class="img"><img src="image/3.jpg" alt="3"></li>
+			<li class="img"><img src="image/4.jpg" alt="4"></li>
+		</ul>
+		<div class="slide-control" id="slider-control">
+			<div class="slide prev" id="slide-prev" ></div>
+			<div class="slide next" id="slide-next"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		<!--
+		var width=$(".img-container").width()/5;
+		$("#slide-next").on("click",function(event){
+			$("img-container").animate({left:"-="+width+"px"},300);
+		});
+		//-->
+</script>
+</body>
+</html>
