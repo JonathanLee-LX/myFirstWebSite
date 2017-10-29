@@ -17,6 +17,26 @@
 	</div>
 	<div class="jumbotron head">
 		<div class="container">
+			<form class="form-inline">
+				<div class="form-group">
+					<label for="Email" class="sr-only">Email</label>
+					<input type="email" class="form-control" placeholder="Email">
+				</div>
+				<div class="form-group">
+					<label for="Password" class="sr-only">Password</label>
+					<input type="password" class="form-control" placeholder="password">
+				</div>
+				<div class="form-group">
+					<lable class="sr-only">File Input</lable>
+					<input type="file">
+				</div> 
+				<div class="form-group">
+					<label  class="sr-only"><input type="checkbox">Check me out</label>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			</form>
 			<h1>Welcome to my first website!!!</h1>
 			<p>Thank you very much</p>
 			<p><a href="#" role="button" class="btn btn-primary btn-lg">Learn More</a></p>
@@ -116,6 +136,34 @@
 				<div class="col-xs-4">Lee</div>
 			</div>
 		</div>
+		<div class="table-responsive">
+			<table class="table table-striped table-bordered table-hover">
+				<tr class="active">
+					<td>name</td>
+					<td>age</td>
+					<td>sex</td>
+					<td>info</td>
+				</tr>
+				<tr class="success">
+					<td>lx</td>
+					<td>22</td>
+					<td>man</td>
+					<td>ss</td>
+				</tr>
+				<tr class="danger">
+					<td>lx</td>
+					<td>22</td>
+					<td>man</td>
+					<td>m22</td>
+				</tr>
+				<tr class="warning">
+					<td>lx</td>
+					<td>22</td>
+					<td>man</td>
+					<td>girl</td>
+				</tr>
+			</table>
+		</div>
 	</div>
 	<footer  class="container-fluid foot-wrap">
 		<div class="pull-right container-fluid">
@@ -123,7 +171,31 @@
 			<span>邮箱</span>
 			<span>电话</span>
 			<span>更多</span>
+			<address>
+				<strong>Home,Inc</strong><br>
+				42 LiXin Street,Suite 401<br>
+				HengYang ,HUNAN <br>
+				<abbr title="Phone">P:</abbr>(+86) 18692095480
+			</address>
+			<address>
+				<strong>Email</strong><br>
+				<a href="mailto:#">1150974628@qq.com</a>
+			</address>
 		</div>
+		<a href="#" class="h1">Jonathan Lee</a>
+		For example,<code>(function(){})()</code>
+		<p>
+			To switch directories,type<kbd>cd</kbd>follwed by
+			To edit settings ,press <kbd>ctrl+,</kbd>
+		</p>
+		<pre class="pre-scrollable">
+			@state-danger-text:              #a94442;
+			@state-danger-bg:                #f2dede;
+			@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
+		</pre>
+		<code>
+			<span><var>y</var>=m<var>x</var>+b</span>
+		</code>
 	</footer>
 	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
