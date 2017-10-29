@@ -1,4 +1,7 @@
 
 .head{
 	background-image: url(../image/1.jpg);
+	background-origin: border-box;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
