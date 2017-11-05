@@ -4,6 +4,7 @@ $(function(){
 		$(this).tab('show')
 	})
 	console.log($.support);
+	
 })
 /*
 Boostrap为大部分插件所具有的动作提供自定义事件，一般来说，这些事件都有不定式
