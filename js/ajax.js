@@ -3,7 +3,7 @@ var search = document.getElementById("search")
 var submit = document.getElementById("submit-btn")
 submit.addEventListener("click",function(e){
 	e.preventDefault()//阻止onsubmit的默认事件
-	console.log("has run")
+//	console.log("has run")
 	var xhr = new XMLHttpRequest()
 	xhr.onreadystatechange = function(){
 		if(xhr.readyState == 4){
@@ -16,7 +16,7 @@ submit.addEventListener("click",function(e){
 			}
 		}
 	}
-	var value = search.value,name = "name",url = "http://localhost:8000"
+	var value = search.value,name = "name",url = "http://jlx520.xyz:8000"
 	var url = addURLParam(url,name,value)
 	xhr.open("get",url,true)
 	xhr.send(null)
