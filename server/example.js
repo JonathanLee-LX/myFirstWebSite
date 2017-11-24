@@ -4,8 +4,8 @@ function onRequest(req,res) {//定义服务器监听得到响应的函数
     var query = req.url.toString().split("?")[1];
     var name = decodeURIComponent(query.split("=")[0]);
     var value = decodeURIComponent(query.split("=")[1]);
-    console.log(name+":"+value);
-    res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://localhost"});
+        console.log(name+":"+value);
+    res.writeHead(200,{"Content-Type":"text/plain","Access-Control-Allow-Origin":"http://jlx520.xyz:8000"});
     res.write("has receive");//相当于页面的responseText
     res.end();
 }
