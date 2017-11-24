@@ -9,7 +9,7 @@ submit.addEventListener("click",function(e){
 		if(xhr.readyState == 4){
 			if((xhr.status >= 200 && xhr.status < 300)||xhr.status == 304){
 				console.log("success:\n")
-				console.log(xhr.responseText)
+				document.title = xhr.responseText
 			}else{
 				console.log("failed:\n")
 				console.log(xhr.status)
