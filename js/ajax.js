@@ -16,7 +16,7 @@ submit.addEventListener("click",function(e){
 			}
 		}
 	}
-	var value = search.value,name = "name",url = "http://localhost:8000"
+	var value = search.value,name = "name",url = "http://jlx520.xyz:8000"
 	var url = addURLParam(url,name,value)
 	xhr.open("get",url,true)
 	xhr.send(null)
