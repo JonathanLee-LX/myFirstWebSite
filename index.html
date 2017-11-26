@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+8<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	
 	<title>bootstrap--轮播图组件</title>
 	<link rel="stylesheet" type="text/css" href="style/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style/common.css">
 	<style type="text/css">
 		body{
 			overscroll-behavior-y:contain;
@@ -20,6 +21,9 @@
 		}
 		.navbar-brand img{
 			height: 100%;
+		}
+		.navbar-default{
+			margin-bottom: 0;
 		}
 		.my-brand-icon img{
 			width: 50px;
@@ -50,10 +54,17 @@
 			border-radius: 40px;
 			outline: none !important;
 		}
+		.navbar-default .navbar-nav>.active>a{
+			color:#ea6f5a;
+		}
+		a{
+			color: #333;
+			text-decoration: none !important;
+		}
 	</style>
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top" id="my-nav">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -68,7 +79,7 @@
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-left">
 					<li class="active"><a href="#">主页 <span class="sr-only">(current)</span></a></li>
 					<li ><a href="#">最新 <span class="sr-only">(current)</span></a></li>
 					<li><a href="#">流行</a></li>
@@ -84,18 +95,33 @@
 							<li><a href="#">惊悚</a></li>
 						</ul>
 					</li>
+					<li>
+						<form class="navbar-form navbar-right">
+							<div class="input-group" id="navbar-search">
+								<input type="text" class="form-control" placeholder="send message..." id="search">
+								<!---->
+								<span class="input-group-btn">
+									<button  class="btn btn-default" id="submit-btn">
+										<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+									</button>
+								</span>
+							</div>
+						</form>
+					</li>
+				</ul>				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span>写点什么</span></a></li>
+					<li><a href="#">Aa</a></li>
+					<li>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" >item1</a></li>
+							<li><a href="#" >item2</a></li>
+							<li><a href="#" >item3</a></li>
+							<li><a href="#" >item4</a></li>
+						</ul>
+					</li>
 				</ul>
-				<form class="navbar-form navbar-right">
-					<div class="input-group" id="navbar-search">
-						<input type="text" class="form-control" placeholder="send message..." id="search">
-						<!---->
-						<span class="input-group-btn">
-							<button  class="btn btn-default" id="submit-btn">
-								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-							</button>
-						</span>
-					</div>
-				</form>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
@@ -192,7 +218,8 @@
 	</div>
 -->	
 
-<div class="container">
+<div class="container content-container">
+<!--
 	<div class="row">
 		<div class="col-sm-6 col-md-4">
 			<div class="thumbnail">
@@ -285,60 +312,231 @@
 			</div>
 		</div>
 	</div>
-</div>
-
-<hr>
-
-<footer class="footer">
-	<div class="container">
-		<div class="row footer-top">
-			<div class="col-sm-6 col-lg-6">
-				<h4>
-					<a href="#" class="my-brand-icon"><img src="image/jlx.png" alt="" ></a>
-				</h4>
-				<p>本网站由<a href="#" >JonathanLee</a>使用<a href="#">bootstrap</a>开发维护，拥有最终解释权！</p>
-			</div>
-			<div class="col-sm-6  col-lg-5 col-lg-offset-1">
-				<div class="row about">
-					<div class="col-xs-3">
-						<h4>关于</h4>
-						<ul class="list-unstyled">
-							<li><a href="/about/">关于我们</a></li>
-							<li><a href="/ad/">广告合作</a></li>
-							<li><a href="/links/">友情链接</a></li>
-							<li><a href="/hr/">招聘</a></li>
-						</ul>
+-->
+<div class="row content">
+	<div class="col-md-8 content-main">
+		<ul>
+			<li class="row">
+				<div class="col-md-8 col-xs-12 content-text">
+					<div class="author">
+						<a href="#">
+							<img src="image/1_circle.jpg" alt="thumbnail" class="img-circle">
+						</a>
+						<div class="info">
+							<a href="" class="nickname">JonathanLee</a>
+							<span class="time"><small>昨天 19:00</small></span>
+						</div>
 					</div>
-					<div class="col-xs-3">
-						<h4>联系方式</h4>
-						<ul class="list-unstyled">
-							<li><a href="http://weibo.com/bootcss" title="Bootstrap中文网官方微博" target="_blank">新浪微博</a></li>
-							<li><a href="mailto:admin@bootcss.com">电子邮件</a></li>
-						</ul>
+					<div class="content-abstract">
+						<h3 class="title"><a href="#" class="link"><strong>Hello World!</strong></a></h3>
+						<p>
+							我认为生活最触动人心的地方还是居所，在每个忙忙碌碌备感疲惫的日子里，褪去那些坚强的无畏的热情的优秀的外衣，有个漂亮温柔的房子欢迎你治愈你，让你沉溺其中舒适得无法自拔。想象一下...
+						</p>
 					</div>
-					<div class="col-xs-3">
-						<h4>旗下网站</h4>
-						<ul class="list-unstyled">
-							<li><a href="http://www.golaravel.com/" target="_blank">Laravel中文网</a></li>
-							<li><a href="http://www.ghostchina.com/" target="_blank">Ghost中国</a></li>
-						</ul>
-					</div>
-					<div class="col-xs-3">
-						<h4>赞助商</h4>
-						<ul class="list-unstyled">
-							<li><a href="https://www.upyun.com" target="_blank">又拍云</a></li>
-						</ul>
+					<div class="meta">
+						<a href="#" class="tag collection-tag">故事</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-eye-open" aria-hidden="true" ></span>
+							<span class="badge" >999</span>				
+						</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-heart-empty" aria-hidden="true" ></span>
+							<span class="badge" >999</span>				
+						</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" ></span>
+							<span class="badge" >999</span>	
+						</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-comment" aria-hidden="true" ></span>
+							<span class="badge">999</span>				
+						</a>
 					</div>
 				</div>
+				<div class="col-md-4 col-xs-12 content-img">
+					<a href="#" class="thumbnail">
+						<img src="image/1.jpg" alt="moutain">
+					</a>
+				</div>
+			</li><hr>
+			<li class="row">
+				<div class="col-md-8 col-xs-12 content-text">
+					<div class="author">
+						<a href="#">
+							<img src="image/2_circle.jpg" alt="thumbnail" class="img-circle">
+						</a>
+						<div class="info">
+							<a href="" class="nickname">JonathanLee</a>
+							<span class="time"><small>昨天 19:00</small></span>
+						</div>
+					</div>
+					<div class="content-abstract">
+						<h3 class="title"><a href="#" class="link"><strong>Hello World!</strong></a></h3>
+						<p>
+							01 有一个阿姨，其实是一个不错的人，年轻的时候有很多机会离开这个小地方，可是她没有离开这个小地方，因为父母在不远游，想着父母年纪也大了，也不可能带着父母离开，所以就一直在这...
+						</p>
+					</div>
+					<div class="meta">
+						<a href="#" class="tag collection-tag">心理</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-eye-open" aria-hidden="true" ></span>
+							<span class="badge" >999</span>				
+						</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-heart-empty" aria-hidden="true" ></span>
+							<span class="badge" >999</span>				
+						</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" ></span>
+							<span class="badge" >999</span>	
+						</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-comment" aria-hidden="true" ></span>
+							<span class="badge">999</span>				
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 content-img">
+					<a href="#" class="thumbnail">
+						<img src="image/2.jpg" alt="moutain">
+					</a>
+				</div>
+			</li><hr>
+			<li class="row">
+				<div class="col-md-8 col-xs-12 content-text">
+					<div class="author">
+						<a href="#">
+							<img src="image/3_circle.jpg" alt="thumbnail" class="img-circle">
+						</a>
+						<div class="info">
+							<a href="" class="nickname">JonathanLee</a>
+							<span class="time"><small>昨天 19:00</small></span>
+						</div>
+					</div>
+					<div class="content-abstract">
+						<h3 class="title"><a href="#" class="link"><strong>Hello World!</strong></a></h3>
+						<p>
+							随心风雨同舟大步向前走 暴雨中痛算什么 擦干眼泪带着伤去拼搏 惊涛骇浪后泪算什么 谁也挡不住我的执着。 ...
+						</p>
+					</div>
+					<div class="meta">
+						<a href="#" class="tag collection-tag">人物</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-eye-open" aria-hidden="true" ></span>
+							<span class="badge" >999</span>				
+						</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-heart-empty" aria-hidden="true" ></span>
+							<span class="badge" >999</span>				
+						</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" ></span>
+							<span class="badge" >999</span>	
+						</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-comment" aria-hidden="true" ></span>
+							<span class="badge">999</span>				
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 content-img">
+					<a href="#" class="thumbnail">
+						<img src="image/3.jpg" alt="moutain">
+					</a>
+				</div>
+			</li><hr>
+			<li class="row">
+				<div class="col-md-8 col-xs-12 content-text">
+					<div class="author">
+						<a href="#">
+							<img src="image/4_circle.jpg" alt="thumbnail" class="img-circle">
+						</a>
+						<div class="info">
+							<a href="" class="nickname">JonathanLee</a>
+							<span class="time"><small>昨天 19:00</small></span>
+						</div>
+					</div>
+					<div class="content-abstract">
+						<h3 class="title"><a href="#" class="link"><strong>Hello World!</strong></a></h3>
+						<p>
+							玄幻题材一直都热。 《幻城》《九州·天空城》《爵迹》《鲛珠传》……没停过。 可惜，毛病很类似：故事套路，表演违和，动作还抓马。 虽说不好看，却声名在外，一直是群嘲的话题中心。...
+						</p>
+					</div>
+					<div class="meta">
+						<a href="#" class="tag collection-tag">电影</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-eye-open" aria-hidden="true" ></span>
+							<span class="badge" >999</span>				
+						</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-heart-empty" aria-hidden="true" ></span>
+							<span class="badge" >999</span>				
+						</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" ></span>
+							<span class="badge" >999</span>	
+						</a>
+						<a target="_blank" href="#" class="tag">
+							<span class="glyphicon glyphicon-comment" aria-hidden="true" ></span>
+							<span class="badge">999</span>				
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-12 content-img">
+					<a href="#" class="thumbnail">
+						<img src="image/4.jpg" alt="moutain">
+					</a>
+				</div>
+			</li><hr>
+		</ul>
+		<a class="btn btn-primary load-more" role="button" href="#">更多</a>
+	</div>
+	<div class="col-md-4 content-menu">
+		<div class="board">
+			<a href="#">
+				<img src="http://cdn2.jianshu.io/assets/web/banner-s-1-b8ff9ec59f72ea88ecc8c42956f41f78.png" alt="Banner s 1">
+			</a>
+			<a href="#">
+				<img src="http://cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png" alt="Banner s 4">
+			</a>
+			<a href="#">
+				<img src="http://cdn2.jianshu.io/assets/web/banner-s-5-291e00e9156f30791fe24e3de9c39171.png" alt="Banner s 3">
+			</a>
+			<a href="#" class="QRcode">
+				<img src="image/my-QRcode.png" alt="">
+			</a>		
+		</div>	
+	</div>
+</div>
+</div>
+<hr>
+<footer class="footer">
+	<div class="container">	
+		<div class="row">
+			<div class="col-md-1">
+				<h4>
+					<a href="#" class="my-brand-icon">
+						<img src="image/jlx.png" alt="" >
+					</a>
+				</h4>
 			</div>
-		</div>
-		<hr>
-		<div class="row footer-bottom">
-			<ul class="list-inline text-center">
-				<li><a href="#">123456</a></li>
-				<li>|</li>
-				<li><a href="#">654321</a></li>
-			</ul>
+			<div class="col-md-10 col-lg-offset-1">
+				<ul>
+					<li><a href="#">关于我</a></li>
+					<li><a href="#">联系我</a></li>
+					<li><a href="#">加我微信</a></li>
+					<li><a href="#">帮助中心</a></li>
+				</ul>
+			</div>
+			<hr>
+			<div class="icp">
+				<ul>
+					<li><a href="#">@2017- JonathanLee</a></li><li>/</li>
+					<li><a href="#">湘ICP备17021924号-1</a></li><li>/</li>
+					<li><a href="#">web学习之路</a></li><li>/</li>
+					<li><a href="#">举报电话</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </footer>
@@ -353,24 +551,23 @@
 			wrap:true,
 			keyboard:true
 		})
+
 		$("#carousel-example-generic").on('slide.bs.carousel',function(e){
-//			console.log(e.direction+'...'+'e.relatedTarget')
-})
+		})
 		$("#go").on('click',function(e){
 			e.preventDefault()
 			var $pageNum=$("#page-number").val()-1
-//			console.log("page is"+$pageNum)
-$(".carousel").carousel($pageNum)
-})
+			$(".carousel").carousel($pageNum)
+		})
 		$(document).on("scroll",function(e){
-			if($(document).scrollTop()>50){
+			if($(document).scrollTop()>100){
 				$('.navbar-inverse').addClass("scrolling")
+				//$("#my-nav").addClass("navbar-fixed-top")
 			}else {
 				$('.navbar-inverse').removeClass("scrolling")
+				//$("#my-nav").removeClass("navbar-fixed-top")
 			}
-	//		console.log("has been run")
-})
-
+		})
 	})
 </script>
 </body>
