@@ -1,4 +1,4 @@
-;(function ( $, window, document, undefined ) {
+(function ( $, window, document, undefined ) {
     // Defaults
     var _buffer = null,
         _watch  = [],

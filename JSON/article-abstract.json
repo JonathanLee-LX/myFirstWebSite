@@ -1,0 +1,16 @@
+{
+	"author":{
+		"nickname":"JonathanLee",
+		"time":"昨天 19:00",
+		"avatar":"image/1_circle.jpg"//用户头像avatar
+	},
+	"abstract":"我认为生活最触动人心的地方还是居所，在每个忙忙碌碌备感疲惫的日子里，褪去那些坚强的无畏的热情的优秀的外衣，有个漂亮温柔的房子欢迎你治愈你，让你沉溺其中舒适得无法自拔。想象一下..."
+	,
+	"meta":{
+		"collection-tag":"故事",
+		"heart-empty-tag":"999",//收藏标签
+		"thumbs-up-tag":"999",//赞同标签
+		"comment-tag":"999"
+	},
+	"thumbnail":"image/1.jpg"
+}

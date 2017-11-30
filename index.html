@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-8<html lang="en">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	
@@ -7,62 +7,6 @@
 	<title>bootstrap--轮播图组件</title>
 	<link rel="stylesheet" type="text/css" href="style/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="style/common.css">
-	<style type="text/css">
-		body{
-			overscroll-behavior-y:contain;
-		}
-		body{
-			width: 100%;
-			height: 100%;
-			overflow-x: hidden;
-			background-color: #fff;
-		}
-		.navbar-fixed-top{
-			border-bottom: 1px solid #ccc;
-		}
-		.navbar-brand img{
-			height: 100%;
-		}
-		.navbar-default{
-			margin-bottom: 0;
-		}
-		.my-brand-icon img{
-			width: 50px;
-		}
-		.brand img{
-			height: 100%;
-		}
-		.full-page{
-			padding:0;
-		}
-		.jumbotron{
-			padding-bottom: 0;
-		}
-		.footer{
-			padding-top: 20px;
-		}
-		.footer a{
-			color:#777;
-		}
-		.scrolling{
-			background-color: rgba(0,0,0,.8);
-			border:0;
-		}
-		.input-group .form-control{
-			border-radius: 40px;
-		}
-		.input-group .input-group-btn button {
-			border-radius: 40px;
-			outline: none !important;
-		}
-		.navbar-default .navbar-nav>.active>a{
-			color:#ea6f5a;
-		}
-		a{
-			color: #333;
-			text-decoration: none !important;
-		}
-	</style>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" id="my-nav">
@@ -129,7 +73,7 @@
 
 
 	<div class="jumbotron">
-		<div class="container-fluid full-page">
+		<div class="container full-page">
 			<div class="carousel slide" data-ride="carousel" id="carousel-example-generic">
 				<!--Indicators-->
 				<ol class="carousel-indicators">
@@ -318,7 +262,7 @@
 	<div class="col-md-8 content-main">
 		<ul>
 			<li class="row">
-				<div class="col-md-8 col-xs-12 content-text">
+				<div class="col-md-8 col-xs-12 abstract">
 					<div class="author">
 						<a href="#">
 							<img src="image/1_circle.jpg" alt="thumbnail" class="img-circle">
@@ -328,7 +272,7 @@
 							<span class="time"><small>昨天 19:00</small></span>
 						</div>
 					</div>
-					<div class="content-abstract">
+					<div class="article-abstract">
 						<h3 class="title"><a href="#" class="link"><strong>Hello World!</strong></a></h3>
 						<p>
 							我认为生活最触动人心的地方还是居所，在每个忙忙碌碌备感疲惫的日子里，褪去那些坚强的无畏的热情的优秀的外衣，有个漂亮温柔的房子欢迎你治愈你，让你沉溺其中舒适得无法自拔。想象一下...
@@ -340,7 +284,7 @@
 							<span class="glyphicon glyphicon-eye-open" aria-hidden="true" ></span>
 							<span class="badge" >999</span>				
 						</a>
-						<a target="_blank" href="#" class="tag">
+						<a target="_blank" href="#" class="tag heart-empty-tag">
 							<span class="glyphicon glyphicon-heart-empty" aria-hidden="true" ></span>
 							<span class="badge" >999</span>				
 						</a>
@@ -515,28 +459,27 @@
 	<div class="container">	
 		<div class="row">
 			<div class="col-md-1">
-				<h4>
-					<a href="#" class="my-brand-icon">
-						<img src="image/jlx.png" alt="" >
-					</a>
-				</h4>
+				<a href="#">
+					<img src="image/jlx.png" alt="icon" class="my-brand-icon">
+				</a>
 			</div>
-			<div class="col-md-10 col-lg-offset-1">
-				<ul>
-					<li><a href="#">关于我</a></li>
-					<li><a href="#">联系我</a></li>
-					<li><a href="#">加我微信</a></li>
-					<li><a href="#">帮助中心</a></li>
-				</ul>
-			</div>
-			<hr>
-			<div class="icp">
-				<ul>
-					<li><a href="#">@2017- JonathanLee</a></li><li>/</li>
-					<li><a href="#">湘ICP备17021924号-1</a></li><li>/</li>
-					<li><a href="#">web学习之路</a></li><li>/</li>
-					<li><a href="#">举报电话</a></li>
-				</ul>
+			<div class="col-md-10 ">	
+				<div class="row">
+					<ul>
+						<li><a href="#">关于我</a></li>
+						<li><a href="#">联系我</a></li>
+						<li><a href="#">加我微信</a></li>
+						<li><a href="#">帮助中心</a></li>
+					</ul>
+				</div>
+				<div class="row icp">
+					<ul>
+						<li><a href="#">@2017- JonathanLee</a></li><li>/</li>
+						<li><a href="#">湘ICP备17021924号-1</a></li><li>/</li>
+						<li><a href="#">web学习之路</a></li><li>/</li>
+						<li><a href="#">举报电话</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

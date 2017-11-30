@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单提交及序列化</title>
+	<style type="text/css">
+		ul{
+			list-style:none;
+		}
+		.list li{
+			float: left;
+			width: 400px;
+			height: 226px;
+			display: inline-block;
+			border:1px solid #555;
+			box-shadow: 3px 8px 5px #aaa;
+			overflow: hidden;
+		}
+		.list li>img{
+			text-align: center;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<form action="http://localhost:9000" method="GET">
+			<input type="text" name="title" placeholder="标题"><br><hr>
+			<textarea cols="100" rows="30" placeholder="写点什么。。。" name="article"></textarea><br><hr>
+			<input type="file" name="image" id="file" multiple="multiple"><br><hr>
+			<select name="select" id="select" value="选择一个你喜欢的颜色">
+				<option value="red">red</option>
+				<option value="green">green</option>
+				<option value="blue">blue</option>
+				<option value="black">black</option>
+				<option value="cyan">cyan</option>
+			</select><br>
+			<input type="submit" name="submit" value="表单提交">
+			<input type="button" name="submit" id="send" value="ajax提交">
+			<button type="reset">重置</button>
+		</form>
+		<ul class="list">
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="js/serialize.js"></script>
+	<script type="text/javascript" src="js/send-message.js"></script>
+	<script type="text/javascript">
+		var file =document.getElementById("file");
+		var list =document.getElementsByClassName("list")[0];
+		//在本地预览图片
+		file.onchange = function(e){
+			var files = this.files
+			if(!files.length) return; 
+			console.log(files)
+			console.log(files.length)
+			for(var i=0,len = files.length;i < len;i++){
+				//创建一个对象URL，指向计算机上该文件对象的路径
+				var fileReader = URL.createObjectURL(files[0])
+				var li = "<li><img src="+fileReader+"></li>"
+				list.innerHTML += li;
+				/*
+				var fileReader = new FileReader()
+				fileReader.readAsDataURL(files[i])
+				fileReader.onload = function(fileReader){
+					console.log(fileReader)
+					var li ="<li><img src="+fileReader.target.result+"></li>"
+					list.innerHTML +=li
+				}
+				*/
+			}
+		};
+		var form = document.forms[0],
+		submit = form.elements["submit"],
+		query;
+
+		//console.log(submit)
+		submit.onclick = function(e){
+			e.preventDefault()
+			this.disabled = true
+			console.log("run")
+			query = "?"+serialize(document.forms[0])
+			console.log(query)
+		};
+	</script>
+</body>
+</html>

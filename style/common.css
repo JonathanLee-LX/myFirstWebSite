@@ -11,6 +11,24 @@ ul{
 hr{
 	margin-top: 5px;
 }
+img{
+	height: 100%;
+}
+.navbar-fixed-top{
+	border-bottom: 1px solid #ccc;
+	box-shadow: 1px 1px 5px #888;
+}
+.jumbotron{
+	background-color: #fff;
+}
+.full-page{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.my-brand-icon{
+	width: 100%;
+}
 .content-main ul>.row{
 	padding: 20px 0 20px 0;
 }
@@ -30,10 +48,10 @@ hr{
 .info .time{
 	color: #969696;
 }
-.content-abstract{
+.article-abstract{
 
 }
-.content-abstract .title{
+.article-abstract .title{
 	margin-top: 0;
 }
 .meta{
