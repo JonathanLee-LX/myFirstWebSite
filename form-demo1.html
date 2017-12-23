@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="theme-color" content="#ea6f5a">
 	<title>表单提交及序列化</title>
+	<link rel="stylesheet" type="text/css" href="style/bootstrap.css">
 	<style type="text/css">
 		ul{
 			list-style:none;
@@ -23,26 +26,20 @@
 	</style>
 </head>
 <body>
-	<div>
-		<form action="http://localhost:9000" method="GET">
-			<input type="text" name="title" placeholder="标题"><br><hr>
-			<textarea cols="100" rows="30" placeholder="写点什么。。。" name="article"></textarea><br><hr>
-			<input type="file" name="image" id="file" multiple="multiple"><br><hr>
-			<select name="select" id="select" value="选择一个你喜欢的颜色">
-				<option value="red">red</option>
-				<option value="green">green</option>
-				<option value="blue">blue</option>
-				<option value="black">black</option>
-				<option value="cyan">cyan</option>
-			</select><br>
-			<input type="submit" name="submit" value="表单提交">
-			<input type="button" name="submit" id="send" value="ajax提交">
-			<button type="reset">重置</button>
+	<div class="container">
+		<form action="http://localhost:9000" method="POST" class="form">
+			<div class="row">
+				<div class="col-md-12">
+					<input type="text" name="title" placeholder="请输入标题" class="form-control input-lg "><hr>
+				</div>
+				<div class="col-md-12">
+					<textarea  rows="20" placeholder="写点什么" name="article" class="form-control input-lg"></textarea><br><hr>
+				</div>
+			</div>
 		</form>
-		<ul class="list">
-		</ul>
 	</div>
 	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/serialize.js"></script>
 	<script type="text/javascript" src="js/send-message.js"></script>
 	<script type="text/javascript">
@@ -51,7 +48,7 @@
 		//在本地预览图片
 		file.onchange = function(e){
 			var files = this.files
-			if(!files.length) return; 
+			if(!files.length) return;
 			console.log(files)
 			console.log(files.length)
 			for(var i=0,len = files.length;i < len;i++){
