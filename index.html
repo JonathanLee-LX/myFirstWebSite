@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="CN_ZH">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="theme-color" content="#ea6f5a">
-	<title>bootstrap--轮播图组件</title>
+	<title>首页</title>
 	<link rel="stylesheet" type="text/css" href="style/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="style/common.css">
 </head>
@@ -25,11 +25,11 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
 				<ul class="nav navbar-nav navbar-left">
-					<li class="active"><a href="#">主页 <span class="sr-only">(current)</span></a></li>
-					<li ><a href="#">最新 <span class="sr-only">(current)</span></a></li>
-					<li><a href="#">流行</a></li>
+					<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;主页<span class="sr-only">(current)</span></a></li>
+					<li ><a href="#"><span class="glyphicon glyphicon-refresh"></span>&nbsp;最新 <span class="sr-only">(current)</span></a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-fire"></span>&nbsp;流行</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">分类 <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-th-large"></span>&nbsp; 分类 <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="#">动作</a></li>
 							<li><a href="#">科幻</a></li>
@@ -43,7 +43,7 @@
 					<li>
 						<form class="navbar-form navbar-right">
 							<div class="input-group" id="navbar-search">
-								<input type="text" class="form-control" placeholder="send message..." id="search">
+								<input type="text" class="form-control" placeholder="搜索" id="search">
 								<!---->
 								<span class="input-group-btn">
 									<button  class="btn btn-default" id="submit-btn">
@@ -55,8 +55,8 @@
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span>写点什么</span></a></li>
-					<li><a href="#">Aa</a></li>
+					<li><a href="#"><span> <span class="glyphicon glyphicon-pencil"></span>&nbsp; 写点什么</span></a></li>
+					<li><a href="#"><span><span class="glyphicon glyphicon-user"></span>&nbsp; 登录</span></a></li>
 					<li>
 						<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"></a>
 						<ul class="dropdown-menu">
@@ -120,18 +120,6 @@
 					</div>
 					<div class="item">
 						<a href="">
-							<img src="image/6.jpg" alt="genji">
-						</a>
-						<div class="carousel-caption"><p>源氏飞镖</p></div>
-					</div>
-					<div class="item">
-						<a href="">
-							<img src="image/7.jpg" alt="genji">
-						</a>
-						<div class="carousel-caption"><p>源氏</p></div>
-					</div>
-					<div class="item">
-						<a href="">
 							<img src="image/8.jpg" alt="lux">
 						</a>
 						<div class="carousel-caption"><p>大元素师拉克丝</p></div>
@@ -148,116 +136,8 @@
 			</div>
 		</div>
 	</div>
-<!--
-	<div class="container">
-		<div class="row scroll-to">
-			<div class="col-xs-8 col-xs-offset-2">
-				<div class="input-group">
-					<input type="text" id="page-number" placeholder="请输入需要跳转的页数..." class="form-control">
-					<span class="input-group-btn">
-						<button  class="btn btn-default" type="button" id="go">Go</button>
-					</span>
-				</div>
-			</div>
-		</div>
-	</div>
--->
-
+	
 <div class="container content-container">
-<!--
-	<div class="row">
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<a href="#" ><img src="image/1.jpg" alt="moutain"></a>
-				<div class="caption">
-					<p>喜欢？</p>
-					<a class="btn btn-primary" role="button">yes</a>
-					<a class="btn btn-default" role="button">no</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<a href="#" ><img src="image/2.jpg" alt="moutain"></a>
-				<div class="caption">
-					<p>喜欢？</p>
-					<a class="btn btn-primary" role="button">yes</a>
-					<a class="btn btn-default" role="button">no</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<a href="#" ><img src="image/3.jpg" alt="moutain"></a>
-				<div class="caption">
-					<p>喜欢？</p>
-					<a class="btn btn-primary" role="button">yes</a>
-					<a class="btn btn-default" role="button">no</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<a href="#" ><img src="image/4.jpg" alt="moutain"></a>
-				<div class="caption">
-					<p>喜欢？</p>
-					<a class="btn btn-primary" role="button">yes</a>
-					<a class="btn btn-default" role="button">no</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<a href="#" ><img src="image/5.jpg" alt="moutain"></a>
-				<div class="caption">
-					<p>喜欢？</p>
-					<a class="btn btn-primary" role="button">yes</a>
-					<a class="btn btn-default" role="button">no</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<a href="#" ><img src="image/6.jpg" alt="moutain"></a>
-				<div class="caption">
-					<p>喜欢？</p>
-					<a class="btn btn-primary" role="button">yes</a>
-					<a class="btn btn-default" role="button">no</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<a href="#" ><img src="image/7.jpg" alt="moutain"></a>
-				<div class="caption">
-					<p>喜欢？</p>
-					<a class="btn btn-primary" role="button">yes</a>
-					<a class="btn btn-default" role="button">no</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<a href="#" ><img src="image/8.jpg" alt="moutain"></a>
-				<div class="caption">
-					<p>喜欢？</p>
-					<a class="btn btn-primary" role="button">yes</a>
-					<a class="btn btn-default" role="button">no</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<a href="#" ><img src="image/9.jpg" alt="moutain"></a>
-				<div class="caption">
-					<p>喜欢？</p>
-					<a class="btn btn-primary" role="button">yes</a>
-					<a class="btn btn-default" role="button">no</a>
-				</div>
-			</div>
-		</div>
-	</div>
--->
 <div class="row content">
 	<div class="col-md-8 content-main">
 		<ul>
@@ -303,7 +183,8 @@
 						<img src="image/1.jpg" alt="moutain">
 					</a>
 				</div>
-			</li><hr>
+			</li>
+			<hr>
 			<li class="row">
 				<div class="col-md-8 col-xs-12 content-text">
 					<div class="author">
@@ -311,7 +192,7 @@
 							<img src="image/2_circle.jpg" alt="thumbnail" class="img-circle">
 						</a>
 						<div class="info">
-							<a href="" class="nickname">JonathanLee</a>
+							<a href="" class="nickname">WPL</a>
 							<span class="time"><small>昨天 19:00</small></span>
 						</div>
 					</div>
@@ -346,7 +227,8 @@
 						<img src="image/2.jpg" alt="moutain">
 					</a>
 				</div>
-			</li><hr>
+			</li>
+			<hr>
 			<li class="row">
 				<div class="col-md-8 col-xs-12 content-text">
 					<div class="author">
@@ -354,7 +236,7 @@
 							<img src="image/3_circle.jpg" alt="thumbnail" class="img-circle">
 						</a>
 						<div class="info">
-							<a href="" class="nickname">JonathanLee</a>
+							<a href="" class="nickname">lixiang</a>
 							<span class="time"><small>昨天 19:00</small></span>
 						</div>
 					</div>
@@ -389,7 +271,8 @@
 						<img src="image/3.jpg" alt="moutain">
 					</a>
 				</div>
-			</li><hr>
+			</li>
+			<hr>
 			<li class="row">
 				<div class="col-md-8 col-xs-12 content-text">
 					<div class="author">
@@ -397,7 +280,7 @@
 							<img src="image/4_circle.jpg" alt="thumbnail" class="img-circle">
 						</a>
 						<div class="info">
-							<a href="" class="nickname">JonathanLee</a>
+							<a href="" class="nickname">Jony</a>
 							<span class="time"><small>昨天 19:00</small></span>
 						</div>
 					</div>
@@ -432,14 +315,15 @@
 						<img src="image/4.jpg" alt="moutain">
 					</a>
 				</div>
-			</li><hr>
+			</li>
+			<hr>
 		</ul>
 		<a class="btn btn-primary load-more" role="button" href="#">更多</a>
 	</div>
-<!--
-	<div class="col-md-4 content-menu">
+
+	<div class="col-md-4 col-xs-0 content-menu">
 		<div class="board">
-			<a href="#">
+			<!-- <a href="#">
 				<img src="http://cdn2.jianshu.io/assets/web/banner-s-1-b8ff9ec59f72ea88ecc8c42956f41f78.png" alt="Banner s 1">
 			</a>
 			<a href="#">
@@ -447,13 +331,13 @@
 			</a>
 			<a href="#">
 				<img src="http://cdn2.jianshu.io/assets/web/banner-s-5-291e00e9156f30791fe24e3de9c39171.png" alt="Banner s 3">
-			</a>
+			</a> -->
 			<a href="#" class="QRcode">
 				<img src="image/my-QRcode.png" alt="">
 			</a>
 		</div>
 	</div>
--->
+
 
 </div>
 </div>
@@ -461,26 +345,26 @@
 <footer class="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-1">
+			<div class="col-md-1 col-xs-2">
 				<a href="#">
 					<img src="image/jlx.png" alt="icon" class="my-brand-icon">
 				</a>
 			</div>
-			<div class="col-md-10 ">
+			<div class="col-md-10 col-xs-10">
 				<div class="row">
 					<ul>
 						<li><a href="#">关于我</a></li>
 						<li><a href="#">联系我</a></li>
 						<li><a href="#">加我微信</a></li>
-						<li><a href="#">帮助中心</a></li>
+						<!-- <li><a href="#">帮助中心</a></li> -->
 					</ul>
 				</div>
 				<div class="row icp">
 					<ul>
 						<li><a href="#">@2017- JonathanLee</a></li><li>/</li>
-						<li><a href="#">湘ICP备17021924号-1</a></li><li>/</li>
+						<!-- <li><a href="#">湘ICP备17021924号-1</a></li><li>/</li> -->
 						<li><a href="#">web学习之路</a></li><li>/</li>
-						<li><a href="#">举报电话</a></li>
+						<!-- <li><a href="#">举报电话</a></li> -->
 					</ul>
 				</div>
 			</div>

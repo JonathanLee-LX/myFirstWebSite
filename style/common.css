@@ -1,5 +1,6 @@
-a{
+a:hover{
 	text-decoration: none;
+
 }
 p{
 	text-align: justify;
@@ -54,24 +55,26 @@ img{
 .article-abstract .title{
 	margin-top: 0;
 }
-.meta{
 
-}
 .tag{
 	margin-right: 10px;
-	color: #ea6f5a;
+	/* color: #ea6f5a */
+}
+.tag a:hover{
+	/* color: #ea6f5a; */
+	filter: brightness(1.2);
 }
 
 .collection-tag{
 	display: inline-block;
-	border: 1px solid #ea6f5a;
+	border: 1px solid #0ea1e6;
 	border-radius: 5px;
 	padding: 2px;
-	color: #ea6f5a;
+	/* color: #ea6f5a; */
 }
 .badge{
-	background-color:#ea6f5a;
-	color: #fff;
+	background-color:#ccc;
+	color: #333;
 }
 .content-img{
 	padding-top: 30px;
